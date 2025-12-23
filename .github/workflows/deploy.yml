@@ -63,15 +63,15 @@ jobs:
 
     - name: Display URL
       run: |
-        kubectl get pods -n github-action-Anand
-        kubectl get svc -n github-action-Anand
+        kubectl get pods -n github-action-anand
+        kubectl get svc -n github-action-anand
 
     - name: Wait for LoadBalancer and Display Full URL
       run: |
         echo "⏳ Waiting for LoadBalancer IP..."
         sleep 60
 
-        EXTERNAL_IP=$(kubectl get svc java-app-service -n github-action-Anand -o jsonpath='{.status.loadBalancer.ingress[0].hostname}')
+        EXTERNAL_IP=$(kubectl get svc java-app-service -n github-action-anand -o jsonpath='{.status.loadBalancer.ingress[0].hostname}')
         
         if [ -z "$EXTERNAL_IP" ]; then
           echo "❌ LoadBalancer IP not available yet."
