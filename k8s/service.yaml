@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: java-app-service
-  namespace: github-action-Anand
+  namespace: github-action-anand
 spec:
   type: LoadBalancer
   selector:
