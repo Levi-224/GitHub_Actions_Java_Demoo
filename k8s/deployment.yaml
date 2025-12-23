@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: java-app
-  namespace: github-action-Anand
+  namespace: github-action-anand
 spec:
   replicas: 2
   selector:
